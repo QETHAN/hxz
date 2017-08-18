@@ -1,0 +1,24 @@
+{include file="common/header" /}
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="<?php echo ($_SERVER['PATH_INFO'] == '/admin666') ? 'active' : ''?>">
+              <a href="/admin666">概览</a>
+            </li>
+            <li class="<?php echo ($_SERVER['PATH_INFO'] == '/admin666/user/add') ? 'active' : ''?>">
+              <a href="/admin666/user/add">添加人员</a>
+            </li>
+            
+          </ul>
+          
+        </div>
+        <div class="col-sm-10 col-sm-offset-2 col-md-10 col-md-offset-2 main">
+          {__CONTENT__}
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
+  
