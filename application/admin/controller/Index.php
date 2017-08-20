@@ -13,7 +13,7 @@ class Index extends Controller
     public function index()
     {
       // 查询状态为1的用户数据 并且每页显示10条数据
-      $users = Db::name('user')->paginate(30);
+      $users = Db::name('user')->paginate(15);
       // 获取分页显示
       $page = $users->render();
       // 模板变量赋值
@@ -118,9 +118,10 @@ class Index extends Controller
             // 上传失败获取错误信息
             return $this->error('图片上传失败！');
         }
+      } else {
+        $_POST['photo'] = "";
       }
       
-
       // 保存数据
       $user = new UserModel($_POST);
       

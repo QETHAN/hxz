@@ -36,10 +36,10 @@
         <tr>
           <td>{$user.number}</td>
           <td>{$user.name}</td>
-          <td>{$user.sex}</td>
+          <td>{$user.sex == '1' ? '男' : '女'}</td>
           <td>
           {if condition="$user.photo neq ''"} 
-            <img style="width:50px;height:50px;" src="/uploads/{$user.photo}">
+            <img style="width:50px;height:auto;" src="/uploads/{$user.photo}">
           {/if}
           </td>
           <td>{$user.minzu}</td>
@@ -61,7 +61,7 @@
           <td>{$user.yaoqiu}</td>
           <td>{$user.xuanyan}</td>
           <td>
-            <a href="admin666/user/{$user.id}/edit">编辑</a>
+            <a style="display:inline-block;width:40px;" href="admin666/user/{$user.id}/edit">编辑</a>
           </td>
         </tr>
       {/volist}
