@@ -4,6 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>缘定新密 牵手七夕</title>
+  <script>
+        function onBridgeReady() {
+            WeixinJSBridge.call('hideOptionMenu');
+        }
+
+        if (typeof WeixinJSBridge == "undefined") {
+            if (document.addEventListener) {
+                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+            } else if (document.attachEvent) {
+                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+            }
+        } else {
+            onBridgeReady();
+        }
+    </script>
   <link rel="stylesheet" href="/static/css/style.css" />
   <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
@@ -28,21 +44,6 @@
     {/volist}
   </ul>
 
-  <script>
-        function onBridgeReady() {
-            WeixinJSBridge.call('hideOptionMenu');
-        }
 
-        if (typeof WeixinJSBridge == "undefined") {
-            if (document.addEventListener) {
-                document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
-            } else if (document.attachEvent) {
-                document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
-                document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
-            }
-        } else {
-            onBridgeReady();
-        }
-    </script>
 </body>
 </html>
