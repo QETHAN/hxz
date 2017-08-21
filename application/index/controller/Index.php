@@ -14,7 +14,8 @@ class Index extends Controller
     {
       $useragent = $_SERVER['HTTP_USER_AGENT'];  
       if(strpos($useragent, 'MicroMessenger') === false && strpos($useragent, 'Windows Phone') === false ){  
-          echo " 非微信浏览器禁止访问";  
+          echo " 非微信浏览器禁止访问";
+          exit;  
       }
     }
 
